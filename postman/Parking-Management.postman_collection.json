@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "631fa677-2d3b-4c78-8a21-ba163015b129",
+		"name": "Parking-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19121584"
+	},
+	"item": [
+		{
+			"name": "create parking-spots",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"spot_number\": \"A1\",\n  \"type\": \"Compact\",\n  \"is_available\": \"yes\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/parking-spots",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parking-spots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all parking-spots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/parking-spots/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parking-spots",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get parking-spots byID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/parking-spots/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parking-spots",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update parking-spots",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"spot_number\": \"A1\",\n  \"type\": \"Compact\",\n  \"is_available\": \"no\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/parking-spots/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parking-spots",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete parking-spots",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/parking-spots/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"parking-spots",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create vehicle-entries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"spot_number\": \"A1\",\n    \"license_plate\": \"K03101\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/vehicle-entries",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"vehicle-entries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exit vehicle-entries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"spot_number\": \"A1\",\n    \"license_plate\": \"K03101\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/vehicle-exits",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"vehicle-exits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vehicle-entries byID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"spot_number\": \"A1\",\n    \"license_plate\": \"K03101\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/vehicle-exits/A1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"vehicle-exits",
+						"A1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
